@@ -37,6 +37,26 @@
 
         <hr />
 
+        <div class="input-group mb-3 w-50 mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Scrivi cose da fare"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+
+            v-model="buttonAdd"
+          />
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+
+          >
+            Aggiungi
+          </button>
+        </div>
+
         <ul>
           <li
             v-for="(todoElements, index) in todoList"
