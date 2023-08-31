@@ -52,6 +52,7 @@
             type="button"
             id="button-addon2"
 
+            @click="newbuttonAdd()"
           >
             Aggiungi
           </button>
@@ -60,7 +61,7 @@
         <ul>
           <li
             v-for="(todoElements, index) in todoList"
-            class="d-flex align-items-center justify-content-around mt-2"
+            class="d-flex align-items-center justify-content-between mt-2"
           >
             <span :class="(todoElements.done) ? 'line-through' : ''"
               >{{ todoElements.title }}</span

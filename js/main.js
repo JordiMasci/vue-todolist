@@ -36,7 +36,7 @@ createApp({
         lineThrough: "",
       },
 
-      buttonAdd: ''
+      buttonAdd: "",
     };
   },
 
@@ -46,11 +46,22 @@ createApp({
     deleteTask(index) {
       this.todoList.splice(index, 1);
     },
+
+    // MILESTONE 3
+    // Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti.
+    newbuttonAdd() {
+      console.log(this.buttonAdd);
+
+      const newObject = {
+        title: this.buttonAdd,
+        done: false,
+      }
+
+      this.todoList.push(newObject);
+
+    },
   },
 }).mount("#app");
-
-// MILESTONE 3
-// Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti.
 
 // Bonus:
 // 1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
