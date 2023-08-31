@@ -1,0 +1,11 @@
+.line-through {
+    text-decoration: line-through;
+}
+
+.d-flex{
+    background-color: aqua;
+}
+
+.delete {
+    cursor: pointer;
+}

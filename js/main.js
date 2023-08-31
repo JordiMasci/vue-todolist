@@ -12,12 +12,31 @@ createApp({
   data() {
     return {
       title: "Lista cose da fare",
-      todoList: ['Fare la spesa', 'Allenarsi', 'Chiamare genitori'],
+      todoList: [
+       {
+        title: 'Fare la spesa',
+        done: true
+       },
+       {
+        title: 'Fare la spesa',
+        done: false
+       } ,
+       {
+        title: 'Fare la spesa',
+        done: false
+       } ,
+       {
+        title: 'Fare la spesa',
+        done: true
+       } 
+      ],
 
       textLineThrough: {
         show: false,
-        // lineThrough:
+        lineThrough:""
       }
+
+
     };
   },
 }).mount("#app");
