@@ -40,7 +40,7 @@ createApp({
 
   methods: {
     deleteTask(index) {
-      console.log(index);
+      this.todoList.splice(index, 1)
     },
   },
 }).mount("#app");
