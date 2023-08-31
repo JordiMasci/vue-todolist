@@ -39,14 +39,16 @@
 
         <ul>
           <li
-            v-for="todoElements in todoList"
+            v-for="(todoElements, index) in todoList"
             class="d-flex align-items-center justify-content-around mt-2"
           >
             <span :class="(todoElements.done) ? 'line-through' : ''"
               >{{ todoElements.title }}</span
             >
 
-            <span class="delete"><i class="fa-brands fa-x-twitter"></i></span>
+            <span class="delete">
+              <i class="fa-brands fa-x-twitter" @click="deleteTask(index)"></i>
+            </span>
           </li>
         </ul>
       </div>
