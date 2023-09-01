@@ -50,8 +50,6 @@ createApp({
     // MILESTONE 3
     // Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti.
     newbuttonAdd() {
-      console.log(this.buttonAdd);
-
       const newObject = {
         title: this.buttonAdd,
         done: false,

@@ -44,34 +44,37 @@
             placeholder="Scrivi cose da fare"
             aria-label="Recipient's username"
             aria-describedby="button-addon2"
-
             v-model="buttonAdd"
+            @keyUp.enter="newbuttonAdd()"
           />
           <button
             class="btn btn-outline-secondary"
             type="button"
             id="button-addon2"
-
             @click="newbuttonAdd()"
           >
             Aggiungi
           </button>
         </div>
 
-        <ul>
+        <ul v-if="(todoList.length > 0)" class="p-0">
           <li
             v-for="(todoElements, index) in todoList"
-            class="d-flex align-items-center justify-content-between mt-2"
+            class="cursore d-flex align-items-center justify-content-between mt-2"
           >
-            <span :class="(todoElements.done) ? 'line-through' : ''"
-              >{{ todoElements.title }}</span
-            >
+            <span
+              @click="todoElements.done = !todoElements.done"
+              :class="(todoElements.done == true) ? 'line-through' : ''"
+              >{{ todoElements.title }}
+            </span>
 
             <span class="delete">
               <i class="fa-brands fa-x-twitter" @click="deleteTask(index)"></i>
             </span>
           </li>
         </ul>
+
+        <h3 v-else class="mt-5">Nessuna cosa da fare</h3>
       </div>
     </div>
   </body>
